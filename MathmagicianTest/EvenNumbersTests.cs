@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace MathmagicianTest
 {
     [TestClass]
-    public class EvenTests
+    public class EvenNumbersTests
     {
         [TestMethod]
         public void EvenEnsureICanCreateClassInstance()
