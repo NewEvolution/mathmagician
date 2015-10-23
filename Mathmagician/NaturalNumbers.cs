@@ -10,10 +10,12 @@ namespace Mathmagician
     public class NaturalNumbers
     {
         protected int first;
+        protected int count;
 
         public NaturalNumbers()
         {
             first = 1;
+            count = 1;
         }
 
         public int GetFirst()
@@ -23,7 +25,7 @@ namespace Mathmagician
 
         public virtual int GetNext(int x)
         {
-            return x + 1;
+            return x + count;
         }
 
         public int[] GetSequence()
