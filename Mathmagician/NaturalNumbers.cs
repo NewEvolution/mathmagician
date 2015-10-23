@@ -23,7 +23,7 @@ namespace Mathmagician
             return first;
         }
 
-        public virtual int GetNext(int x)
+        public int GetNext(int x)
         {
             return x + count;
         }
