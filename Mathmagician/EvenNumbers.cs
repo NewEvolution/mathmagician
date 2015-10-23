@@ -11,7 +11,7 @@ namespace Mathmagician
         public EvenNumbers()
         {
             first = 2;
-            count = 2;
+            increment = 2;
         }
     }
 }
