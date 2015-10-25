@@ -16,7 +16,7 @@ namespace Mathmagician
 
         public override int GetNext(int previous_number)
         {
-            int next_number = previous_number + increment;
+            int next_number = base.GetNext(previous_number);
             increment = previous_number;
             return next_number;
         }
