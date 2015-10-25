@@ -38,7 +38,7 @@ namespace MathmagicianTest
         {
             PrimeNumbers prime = new PrimeNumbers();
             int input = 8;
-            int[] expected = new int[] { 2, 3, 5, 7, 11, 19, 23, 29 };
+            int[] expected = new int[] { 2, 3, 5, 7, 11, 13, 17, 19 };
             int[] actual = prime.GetSequence(input);
             CollectionAssert.AreEqual(expected, actual);
         }
@@ -48,7 +48,7 @@ namespace MathmagicianTest
         {
             PrimeNumbers prime = new PrimeNumbers();
             int length = 7;
-            string expected = "2 3 5 7 11 19 23";
+            string expected = "2 3 5 7 11 13 17";
             string actual = prime.ToString(prime.GetSequence(length));
             Assert.AreEqual(expected, actual);
         }
