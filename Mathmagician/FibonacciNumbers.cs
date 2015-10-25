@@ -14,11 +14,11 @@ namespace Mathmagician
             increment = 0;
         }
 
-        public override int GetNext(int x)
+        public override int GetNext(int previous_number)
         {
-            int returnable = x + increment;
-            increment = x;
-            return returnable;
+            int next_number = previous_number + increment;
+            increment = previous_number;
+            return next_number;
         }
     }
 }
