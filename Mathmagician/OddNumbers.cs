@@ -13,6 +13,5 @@ namespace Mathmagician
             first = 1;
             increment = 2;
         }
-
     }
 }
