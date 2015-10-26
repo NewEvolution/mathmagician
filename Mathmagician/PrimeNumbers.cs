@@ -16,14 +16,30 @@ namespace Mathmagician
 
         public bool isPrime(int a)
         {
-            if (a == 1) return false;
-            if (a == 2 || a == 3) return true;
-            if (!((a & 1) == 1)) return false;
-            if (!((a + 1) % 6 == 0 || (a - 1) % 6 == 0)) return false;
+            if (a == 1)
+            {
+                return false;
+            }
+            if (a == 2 || a == 3)
+            {
+                return true;
+            }
+            if (!((a & 1) == 1))
+            {
+                return false;
+            }
+            if (!((a + 1) % 6 == 0 || (a - 1) % 6 == 0))
+            {
+                return false;
+            }
             int q = (int)Math.Sqrt(a) +1;
             for (int v = 3; v < q; v += 2)
+            {
                 if (a % v == 0)
+                {
                     return false;
+                }
+            }
             return true;
         }
 
