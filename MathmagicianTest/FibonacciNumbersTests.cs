@@ -1,5 +1,6 @@
 ﻿using System;
 using Mathmagician;
+using System.Numerics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace MathmagicianTest
@@ -18,8 +19,8 @@ namespace MathmagicianTest
         public void FibonacciShouldPrintFirstNumber()
         {
             FibonacciNumbers fibonacci = new FibonacciNumbers();
-            int expected = 1;
-            int actual = fibonacci.GetFirst();
+            BigInteger expected = 1;
+            BigInteger actual = fibonacci.GetFirst();
             Assert.AreEqual(expected, actual);
         }
 
@@ -27,9 +28,9 @@ namespace MathmagicianTest
         public void FibonacciShouldPrintNextNumber()
         {
             FibonacciNumbers fibonacci = new FibonacciNumbers();
-            int input = fibonacci.GetFirst();
-            int expected = 1;
-            int actual = fibonacci.GetNext(input);
+            BigInteger input = fibonacci.GetFirst();
+            BigInteger expected = 1;
+            BigInteger actual = fibonacci.GetNext(input);
             Assert.AreEqual(expected, actual);
         }
 
@@ -37,9 +38,9 @@ namespace MathmagicianTest
         public void FibonacciShouldPrintVariableSequenceOfNumbers()
         {
             FibonacciNumbers fibonacci = new FibonacciNumbers();
-            int input = 8;
-            int[] expected = new int[] { 1, 1, 2, 3, 5, 8, 13, 21 };
-            int[] actual = fibonacci.GetSequence(input);
+            BigInteger input = 8;
+            BigInteger[] expected = new BigInteger[] { 1, 1, 2, 3, 5, 8, 13, 21 };
+            BigInteger[] actual = fibonacci.GetSequence(input);
             CollectionAssert.AreEqual(expected, actual);
         }
 
@@ -47,7 +48,7 @@ namespace MathmagicianTest
         public void FibonacciPrintSequenceOfNumbers()
         {
             FibonacciNumbers fibonacci = new FibonacciNumbers();
-            int length = 7;
+            BigInteger length = 7;
             string expected = "1 1 2 3 5 8 13";
             string actual = fibonacci.ToString(fibonacci.GetSequence(length));
             Assert.AreEqual(expected, actual);

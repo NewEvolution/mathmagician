@@ -1,5 +1,6 @@
 ﻿using System;
 using Mathmagician;
+using System.Numerics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace MathmagicianTest
@@ -18,8 +19,8 @@ namespace MathmagicianTest
         public void OddShouldPrintFirstNumber()
         {
             OddNumbers odd = new OddNumbers();
-            int expected = 1;
-            int actual = odd.GetFirst();
+            BigInteger expected = 1;
+            BigInteger actual = odd.GetFirst();
             Assert.AreEqual(expected, actual);
         }
 
@@ -27,9 +28,9 @@ namespace MathmagicianTest
         public void OddShouldPrintNextNumber()
         {
             OddNumbers odd = new OddNumbers();
-            int input = odd.GetFirst();
-            int expected = 3;
-            int actual = odd.GetNext(input);
+            BigInteger input = odd.GetFirst();
+            BigInteger expected = 3;
+            BigInteger actual = odd.GetNext(input);
             Assert.AreEqual(expected, actual);
         }
 
@@ -37,9 +38,9 @@ namespace MathmagicianTest
         public void OddShouldPrintVariableSequenceOfNumbers()
         {
             OddNumbers odd = new OddNumbers();
-            int input = 8;
-            int[] expected = new int[] { 1, 3, 5, 7, 9, 11, 13, 15 };
-            int[] actual = odd.GetSequence(input);
+            BigInteger input = 8;
+            BigInteger[] expected = new BigInteger[] { 1, 3, 5, 7, 9, 11, 13, 15 };
+            BigInteger[] actual = odd.GetSequence(input);
             CollectionAssert.AreEqual(expected, actual);
         }
 
@@ -47,7 +48,7 @@ namespace MathmagicianTest
         public void OddPrintSequenceOfNumbers()
         {
             OddNumbers odd = new OddNumbers();
-            int length = 7;
+            BigInteger length = 7;
             string expected = "1 3 5 7 9 11 13";
             string actual = odd.ToString(odd.GetSequence(length));
             Assert.AreEqual(expected, actual);

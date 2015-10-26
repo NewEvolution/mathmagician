@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Text;
+using System.Numerics;
 using System.Collections;
 using System.Threading.Tasks;
 using System.Collections.Generic;
@@ -9,8 +10,8 @@ namespace Mathmagician
 {
     public class NaturalNumbers
     {
-        protected int first;
-        protected int increment;
+        protected BigInteger first;
+        protected BigInteger increment;
 
         public NaturalNumbers()
         {
@@ -18,24 +19,24 @@ namespace Mathmagician
             increment = 1;
         }
 
-        public int GetFirst()
+        public BigInteger GetFirst()
         {
             return first;
         }
-
-        public virtual int GetNext(int x)
+        
+        public virtual BigInteger GetNext(BigInteger x)
         {
             return x + increment;
         }
 
-        public int[] GetSequence()
+        public BigInteger[] GetSequence()
         {
             return GetSequence(10);
         }
 
-        public int[] GetSequence(int length)
+        public BigInteger[] GetSequence(BigInteger length)
         {
-            List<int> output = new List<int>();
+            List<BigInteger> output = new List<BigInteger>();
             output.Add(GetFirst());
             while (output.Count() < length)
             {
@@ -44,7 +45,7 @@ namespace Mathmagician
             return output.ToArray();
         }
 
-        public string ToString(int[] array)
+        public string ToString(BigInteger[] array)
         {
             string output = String.Join(" ", array);
             return output;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Numerics;
 using System.Threading.Tasks;
 
 namespace Mathmagician
@@ -14,7 +15,7 @@ namespace Mathmagician
             increment = 1;
         }
 
-        public bool isPrime(int a)
+        public bool isPrime(BigInteger a)
         {
             if (a == 1)
             {
@@ -32,8 +33,8 @@ namespace Mathmagician
             {
                 return false;
             }
-            int q = (int)Math.Sqrt(a) +1;
-            for (int v = 3; v < q; v += 2)
+            BigInteger q = (BigInteger)Math.Sqrt((double)a) +1;
+            for (BigInteger v = 3; v < q; v += 2)
             {
                 if (a % v == 0)
                 {
@@ -43,9 +44,9 @@ namespace Mathmagician
             return true;
         }
 
-        public override int GetNext(int x)
+        public override BigInteger GetNext(BigInteger x)
         {
-            int number = base.GetNext(x);
+            BigInteger number = base.GetNext(x);
             while (!isPrime(number))
             {
                 number = base.GetNext(number);

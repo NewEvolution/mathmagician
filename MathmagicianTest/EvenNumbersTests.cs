@@ -1,5 +1,6 @@
 ﻿using System;
 using Mathmagician;
+using System.Numerics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace MathmagicianTest
@@ -18,8 +19,8 @@ namespace MathmagicianTest
         public void EvenShouldPrintFirstNumber()
         {
             EvenNumbers even = new EvenNumbers();
-            int expected = 2;
-            int actual = even.GetFirst();
+            BigInteger expected = 2;
+            BigInteger actual = even.GetFirst();
             Assert.AreEqual(expected, actual);
         }
 
@@ -27,9 +28,9 @@ namespace MathmagicianTest
         public void EvenShouldPrintNextNumber()
         {
             EvenNumbers even = new EvenNumbers();
-            int input = even.GetFirst();
-            int expected = 4;
-            int actual = even.GetNext(input);
+            BigInteger input = even.GetFirst();
+            BigInteger expected = 4;
+            BigInteger actual = even.GetNext(input);
             Assert.AreEqual(expected, actual);
         }
 
@@ -37,9 +38,9 @@ namespace MathmagicianTest
         public void EvenShouldPrintVariableSequenceOfNumbers()
         {
             EvenNumbers even = new EvenNumbers();
-            int input = 8;
-            int[] expected = new int[] { 2, 4, 6, 8, 10, 12, 14, 16 };
-            int[] actual = even.GetSequence(input);
+            BigInteger input = 8;
+            BigInteger[] expected = new BigInteger[] { 2, 4, 6, 8, 10, 12, 14, 16 };
+            BigInteger[] actual = even.GetSequence(input);
             CollectionAssert.AreEqual(expected, actual);
         }
 
@@ -47,7 +48,7 @@ namespace MathmagicianTest
         public void EvenPrintSequenceOfNumbers()
         {
             EvenNumbers even = new EvenNumbers();
-            int length = 7;
+            BigInteger length = 7;
             string expected = "2 4 6 8 10 12 14";
             string actual = even.ToString(even.GetSequence(length));
             Assert.AreEqual(expected, actual);

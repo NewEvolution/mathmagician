@@ -1,5 +1,6 @@
 ﻿using System;
 using Mathmagician;
+using System.Numerics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace MathmagicianTest
@@ -18,8 +19,8 @@ namespace MathmagicianTest
         public void PrimeShouldPrintFirstNumber()
         {
             PrimeNumbers prime = new PrimeNumbers();
-            int expected = 2;
-            int actual = prime.GetFirst();
+            BigInteger expected = 2;
+            BigInteger actual = prime.GetFirst();
             Assert.AreEqual(expected, actual);
         }
 
@@ -27,9 +28,9 @@ namespace MathmagicianTest
         public void PrimeShouldPrintNextNumber()
         {
             PrimeNumbers prime = new PrimeNumbers();
-            int input = prime.GetFirst();
-            int expected = 3;
-            int actual = prime.GetNext(input);
+            BigInteger input = prime.GetFirst();
+            BigInteger expected = 3;
+            BigInteger actual = prime.GetNext(input);
             Assert.AreEqual(expected, actual);
         }
 
@@ -37,9 +38,9 @@ namespace MathmagicianTest
         public void PrimeShouldPrintVariableSequenceOfNumbers()
         {
             PrimeNumbers prime = new PrimeNumbers();
-            int input = 8;
-            int[] expected = new int[] { 2, 3, 5, 7, 11, 13, 17, 19 };
-            int[] actual = prime.GetSequence(input);
+            BigInteger input = 8;
+            BigInteger[] expected = new BigInteger[] { 2, 3, 5, 7, 11, 13, 17, 19 };
+            BigInteger[] actual = prime.GetSequence(input);
             CollectionAssert.AreEqual(expected, actual);
         }
 
@@ -47,7 +48,7 @@ namespace MathmagicianTest
         public void PrimePrintSequenceOfNumbers()
         {
             PrimeNumbers prime = new PrimeNumbers();
-            int length = 7;
+            BigInteger length = 7;
             string expected = "2 3 5 7 11 13 17";
             string actual = prime.ToString(prime.GetSequence(length));
             Assert.AreEqual(expected, actual);
