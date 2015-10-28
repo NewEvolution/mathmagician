@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using System.Text;
-using System.Numerics;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
@@ -21,8 +20,8 @@ namespace Mathmagician
                 Console.WriteLine("How many?");
                 Console.Write(prompt);
                 string response_length = Console.ReadLine();
-                BigInteger length;
-                bool parsed = BigInteger.TryParse(response_length, out length);
+                int length;
+                bool parsed = int.TryParse(response_length, out length);
                 if (parsed)
                 {
                     if (response == "natural numbers")
@@ -60,7 +59,7 @@ namespace Mathmagician
             {
                 Console.WriteLine("Nope! Do better next time.");
             }
-            Console.WriteLine("Press any key to exit...");
+            Console.Write("Press any key to exit...");
             Console.ReadKey();
         }
     }

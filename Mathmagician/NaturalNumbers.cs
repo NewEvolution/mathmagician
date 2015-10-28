@@ -10,7 +10,7 @@ namespace Mathmagician
 {
     public class NaturalNumbers
     {
-        protected BigInteger first;
+        protected int first;
         protected BigInteger increment;
 
         public NaturalNumbers()
@@ -19,7 +19,7 @@ namespace Mathmagician
             increment = 1;
         }
 
-        public BigInteger GetFirst()
+        public int GetFirst()
         {
             return first;
         }
