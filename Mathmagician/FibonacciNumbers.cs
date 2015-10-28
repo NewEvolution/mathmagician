@@ -11,7 +11,6 @@ namespace Mathmagician
     {
         public FibonacciNumbers()
         {
-            first = 1;
             increment = 0;
         }
 
