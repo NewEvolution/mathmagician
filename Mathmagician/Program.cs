@@ -11,6 +11,17 @@ namespace Mathmagician
         static void Main(string[] args)
         {
             string prompt = "> ";
+            string splash = @"         ,/   *
+      _,'/_   |
+      `("")' ,'/
+   _ _,-M-./ /
+   \_\_\.   /    __  __       _   _                           _      _
+     )"" |  (    |  \/  | __ _| |_| |__  _ __ ___   __ _  __ _(_) ___(_) __ _ _ __
+  __/   M   \__ | |\/| |/ _` | __| '_ \| '_ ` _ \ / _` |/ _` | |/ __| |/ _` | '_ \
+  \    /|\    / | |  | | (_| | |_| | | | | | | | | (_| | (_| | | (__| | (_| | | | |
+   `--'|||`--'  |_|  |_|\__,_|\__|_| |_|_| |_| |_|\__,_|\__, |_|\___|_|\__,_|_| |_|
+      ==^==                                             |___/";
+            Console.WriteLine(splash);
             Console.WriteLine("What do you want me to do?");
             Console.Write(prompt);
             string[] valid_responses = new string[] { "natural numbers", "even numbers", "odd numbers", "fibonacci numbers", "prime numbers"};
